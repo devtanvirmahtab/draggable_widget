@@ -21,6 +21,7 @@ class _HorizontalDragUsingDragWidgetState extends State<HorizontalDragUsingDragW
           Positioned(
             left: containerPosition,
             child: Draggable(
+              // childWhenDragging: Container(),
               feedback: Container(
                 width: 150,
                 height: 150,
@@ -41,7 +42,10 @@ class _HorizontalDragUsingDragWidgetState extends State<HorizontalDragUsingDragW
               child: Container(
                 width: 150,
                 height: 150,
-                color: Colors.blue,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: const Center(
                   child: Text(
                     'Drag horizontally!',

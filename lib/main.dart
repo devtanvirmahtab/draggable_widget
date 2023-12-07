@@ -1,5 +1,6 @@
 import 'package:draggable_widget/animated_horizontal_drag.dart';
 import 'package:draggable_widget/usingDragwidet.dart';
+import 'package:draggable_widget/vertical_drag.dart';
 import 'package:flutter/material.dart';
 
 import 'horizontal_drag.dart';
@@ -63,6 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
+                        builder: (context) => const VerticalDragUsingGesture()),
+                  );
+                },
+                child: const Text("Vertical Drag"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
                         builder: (context) => const HorizontalDragUsingDragWidget()),
                   );
                 },
@@ -108,7 +119,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Container(
                       width: 150,
                       height: 150,
-                      color: Colors.blue,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       child: const Center(
                         child: Text(
                           'Drag me!',
