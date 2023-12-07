@@ -1,4 +1,5 @@
 import 'package:draggable_widget/animated_horizontal_drag.dart';
+import 'package:draggable_widget/insidelistview.dart';
 import 'package:draggable_widget/usingDragwidet.dart';
 import 'package:draggable_widget/vertical_drag.dart';
 import 'package:flutter/material.dart';
@@ -88,6 +89,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text("Animated Drag"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const InsideListView()),
+                  );
+                },
+                child: const Text("inside list Drag"),
               ),
             ],
           ),
