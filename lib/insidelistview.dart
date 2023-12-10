@@ -12,7 +12,7 @@ class _InsideListViewState extends State<InsideListView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Horizontal Draggable Container in ListView'),
+        title: const Text('Horizontal Draggable Container in ListView'),
       ),
       body: ListView.builder(
         itemCount: 15,
@@ -31,6 +31,8 @@ class _InsideListViewState extends State<InsideListView> {
 }
 
 class DraggableContainer extends StatefulWidget {
+  const DraggableContainer({super.key});
+
   @override
   _DraggableContainerState createState() => _DraggableContainerState();
 }
@@ -54,15 +56,15 @@ class _DraggableContainerState extends State<DraggableContainer> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         transform: Matrix4.translationValues(_left, 0, 0),
         width: 150,
         height: 150,
         color: Colors.blue,
-        child: Center(
+        child: const Center(
           child: Text(
-            'Drag horizontally!',
+            'Drag horizontal!',
             style: TextStyle(color: Colors.white),
           ),
         ),

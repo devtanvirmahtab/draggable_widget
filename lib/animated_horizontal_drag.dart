@@ -41,12 +41,12 @@ class _AnimatedHorizontalDragState extends State<AnimatedHorizontalDrag> {
                 width: 150,
                 height: 150,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.red,
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: const Center(
                   child: Text(
-                    'Drag horizontally!',
+                    'Drag horizontal!',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
