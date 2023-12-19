@@ -18,7 +18,7 @@ class _InsideListViewState extends State<InsideListView> {
         itemCount: 15,
         itemBuilder: (BuildContext context, int index) {
           if (index == 7) {
-            return DraggableContainer();
+            return const DraggableContainer();
           } else {
             return ListTile(
               title: Text('Item $index'),
@@ -34,10 +34,10 @@ class DraggableContainer extends StatefulWidget {
   const DraggableContainer({super.key});
 
   @override
-  _DraggableContainerState createState() => _DraggableContainerState();
+  DraggableContainerState createState() => DraggableContainerState();
 }
 
-class _DraggableContainerState extends State<DraggableContainer> {
+class DraggableContainerState extends State<DraggableContainer> {
   double _left = 0.0;
   bool _movedToLeft = false;
 
