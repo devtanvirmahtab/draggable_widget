@@ -14,7 +14,7 @@ class _HorizontalDragUsingDragWidgetState extends State<HorizontalDragUsingDragW
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Horizontal Draggable Container'),
+        title: const Text('Horizontal Draggable Container'),
       ),
       body: Stack(
         children: [

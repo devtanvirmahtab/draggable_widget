@@ -39,7 +39,6 @@ class DraggableContainer extends StatefulWidget {
 
 class DraggableContainerState extends State<DraggableContainer> {
   double _left = 0.0;
-  bool _movedToLeft = false;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +51,6 @@ class DraggableContainerState extends State<DraggableContainer> {
       onHorizontalDragEnd: (details) {
         setState(() {
             _left = 0.0;
-            _movedToLeft = false;
         });
       },
       child: AnimatedContainer(
