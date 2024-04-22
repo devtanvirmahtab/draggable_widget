@@ -5,6 +5,7 @@ import 'package:draggable_widget/vertical_drag.dart';
 import 'package:flutter/material.dart';
 
 import 'horizontal_drag.dart';
+import 'others_draggable.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,7 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const HorizontalDragUsingDragWidget()),
+                        builder: (context) =>
+                            const HorizontalDragUsingDragWidget()),
                   );
                 },
                 child: const Text("Drag widget"),
@@ -100,6 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text("inside list Drag"),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OthersDraggable()));
+                },
+                child: Text("others drag"),
+              )
             ],
           ),
           Expanded(
